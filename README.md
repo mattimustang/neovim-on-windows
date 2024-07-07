@@ -137,7 +137,7 @@ Prerequisites:
     - OpenJS.NodeJS - required by a few LSPs
     - 7zip.7zip - add `C:\Program Files\7-Zip` to System path
     - Python.Python.3.12
-    - zig.zig - this is to be able to compile treesitter parsers.
+    - zig.zig - [this is required to be able to compile treesitter parsers](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support).
 - Close the terminal.
 - Open a new PowerShell terminal and type `$Env:Path` and check that `C:\Program
   Files\Neovim\bin` there as well as zig.
