@@ -130,14 +130,15 @@ treesitter parsers, so the steps below are here to document how I did it.
 Prerequisites:
 
 - Open a Windows PowerShell terminal and install these packages using `winget`:
-    - Microsoft.PowerShell
     - Microsoft.Git
     - burntsushi.ripgrep.MSVC
     - sharkdp.fd
     - OpenJS.NodeJS - required by a few LSPs
-    - 7zip.7zip - add `C:\Program Files\7-Zip` to System path
     - Python.Python.3.12
     - zig.zig - [this is required to be able to compile treesitter parsers](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support).
+    - Optional: Microsoft.PowerShell
+    - Optional: 7zip.7zip - add `C:\Program Files\7-Zip` to System path
+
 - Close the terminal.
 - Open a new PowerShell terminal and type `$Env:Path` and check that `C:\Program
   Files\Neovim\bin` there as well as zig.
