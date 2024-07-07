@@ -1,0 +1,17 @@
+            {
+                "closeOnExit": "automatic",
+                "colorScheme": "Flexoki",
+                "commandline": "\"C:\\Program Files\\Neovim\\bin\\nvim.exe\"",
+                "font": 
+                {
+                    "face": "SauceCodePro Nerd Font"
+                },
+                "guid": "{bfaa0b62-7922-4a70-a167-6bac8f2a22f7}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Neovim\\favicon.ico",
+                "name": "Neovim",
+                "padding": "4",
+                "scrollbarState": "hidden",
+                "startingDirectory": "%USERPROFILE%"
+            }
+

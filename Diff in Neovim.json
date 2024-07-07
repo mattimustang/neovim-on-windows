@@ -1,0 +1,14 @@
+{
+    "title": "Diff in Neovim",
+    "exe": "wt.exe ",
+    "param": "--title \"Neovim diff\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" -d {path}",
+    "icon": "\"C:\\Program Files\\Neovim\\favicon.ico\"",
+    "acceptDirectory": false,
+    "acceptDirectoryFlag": 7,
+    "acceptFile": false,
+    "acceptFileFlag": 4,
+    "acceptExts": ".txt|.py|.md|.json",
+    "acceptMultipleFilesFlag": 2,
+    "pathDelimiter": " ",
+    "index": 1
+}

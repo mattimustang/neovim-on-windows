@@ -1,0 +1,13 @@
+{
+    "title": "Edit in Neovim",
+    "exe": "wt.exe ",
+    "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" \"{path}\"",
+    "icon": "\"C:\\Program Files\\Neovim\\favicon.ico\"",
+    "acceptDirectory": false,
+    "acceptDirectoryFlag": 7,
+    "acceptFile": false,
+    "acceptFileFlag": 4,
+    "acceptExts": ".txt|.py|.md|.json",
+    "acceptMultipleFilesFlag": 1,
+    "index": 0
+}
