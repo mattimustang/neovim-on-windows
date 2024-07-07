@@ -1,5 +1,5 @@
 {
-    "title": "Edit in Neovim [Safe Mode]",
+    "title": "Edit in Neovim Safe Mode",
     "exe": "wt.exe ",
     "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" -u NONE \"{path}\"",
     "icon": "\"C:\\Program Files\\Neovim\\favicon.ico\"",
