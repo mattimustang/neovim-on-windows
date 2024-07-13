@@ -1,5 +1,18 @@
 # Neovim on Windows
 
+<!-- toc -->
+
+- [Install Neovim](#install-neovim)
+- [Themes](#themes)
+- [Configure Windows Terminal](#configure-windows-terminal)
+- [Configure the Windows 11 Context Menu](#configure-the-windows-11-context-menu)
+- [Add Neovim as a Suggested App](#add-neovim-as-a-suggested-app)
+- [Associate File Types with Neovim](#associate-file-types-with-neovim)
+- [Optional: Configure the Windows 10 Context Menu](#optional-configure-the-windows-10-context-menu)
+- [Optional: Install LazyVim](#optional-install-lazyvim)
+
+<!-- tocstop -->
+
 This is a guide to how I've set up Neovim on Windows 11 and, though it should if
 I add more text here mostly work on Windows 10 as well.
 As well as another long sentence here how does it wrap it all?
@@ -33,6 +46,7 @@ Install Neovim:
 ```PowerShell
 winget install neovim.neovim
 ```
+
 Copy the Neovim `favicon.ico` to `C:\Program Files\Neovim`.
 You may put this in another directory but you will have to update the supplied
 configurations to point at the new location.
@@ -83,7 +97,7 @@ files you want to use it for or you can do it when you open the file type.
 
 For example:
 
-```
+```text
 .bash
 .c
 .cfg
@@ -114,6 +128,7 @@ For example:
 .yaml
 .yml
 ```
+
 ## Optional: Configure the Windows 10 Context Menu
 
 The Windows 10 context menu can also be configured by opening the
@@ -130,14 +145,15 @@ treesitter parsers, so the steps below are here to document how I did it.
 Prerequisites:
 
 - Open a Windows PowerShell terminal and install these packages using `winget`:
-    - Microsoft.Git
-    - burntsushi.ripgrep.MSVC
-    - sharkdp.fd
-    - OpenJS.NodeJS - required by a few LSPs
-    - Python.Python.3.12
-    - zig.zig - [this is required to be able to compile treesitter parsers](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support).
-    - Microsoft.PowerShell
-    - 7zip.7zip - add `C:\Program Files\7-Zip` to System path
+  - Microsoft.Git
+  - burntsushi.ripgrep.MSVC
+  - sharkdp.fd
+  - OpenJS.NodeJS - required by a few LSPs
+  - Python.Python.3.12
+  - zig.zig -
+    [this is required to be able to compile treesitter parsers](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support).
+  - Microsoft.PowerShell
+  - 7zip.7zip - add `C:\Program Files\7-Zip` to System path
 
 - Close the terminal.
 - Open a new PowerShell terminal and type `$Env:Path` and check that `C:\Program
