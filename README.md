@@ -3,29 +3,40 @@
 <!-- toc -->
 
 - [Install Neovim](#install-neovim)
+- [Add Directory to your Executable Path](#add-directory-to-your-executable-path)
 - [Themes](#themes)
 - [Configure Windows Terminal](#configure-windows-terminal)
 - [Configure the Windows 11 Context Menu](#configure-the-windows-11-context-menu)
+  - [Windows 10 Only: Configure the Windows 10 Context Menu](#windows-10-only-configure-the-windows-10-context-menu)
 - [Add Neovim as a Suggested App](#add-neovim-as-a-suggested-app)
 - [Associate File Types with Neovim](#associate-file-types-with-neovim)
-- [Optional: Configure the Windows 10 Context Menu](#optional-configure-the-windows-10-context-menu)
 - [Optional: Install LazyVim](#optional-install-lazyvim)
 
 <!-- tocstop -->
 
-This is a guide to how I've set up Neovim on Windows 11 and, though it should if
-I add more text here mostly work on Windows 10 as well.
-As well as another long sentence here how does it wrap it all?
+This is a guide to how I've set up Neovim on Windows 11 and Windows 10.
 
 The result will be Neovim with:
 
 - Windows Terminal as its UI.
 - An application you can associate with file types in Windows.
-- An `Edit in Neovim` menu item in the Windows 11 context menu in Explorer.
+- An `Edit in Neovim` menu item in the Windows context menu in Explorer.
 - Optional installation of `LazyVim` and supporting software to get `treesitter`
   syntax highlighting and LSPs functioning.
 
 ## Install Neovim
+
+You can install Neovim with or without local administrator rights on your
+system.
+However, if you install it without administrator some steps require alternatives
+to be performed, or cannot be performed, or require manual editing of the
+provided registry and JSON files.
+The following symbols below will note this:
+
+- 🔐 Requires administrator privileges.
+- 🧑 Alternate step for non-administrators.
+- 📝 Modification of the step or editing of the file required if you installed
+  Neovim in an alternate location.
 
 Prerequisites:
 
@@ -41,15 +52,29 @@ Prerequisites:
 - A [Nerd Font](https://www.nerdfonts.com/).
   I use the `SauceCodePro Nerd Font` in the supplied configurations.
 
-Install Neovim:
+🔐 Install Neovim :
 
 ```PowerShell
 winget install neovim.neovim
 ```
 
-Copy the Neovim `favicon.ico` to `C:\Program Files\Neovim`.
-You may put this in another directory but you will have to update the supplied
-configurations to point at the new location.
+🧑 Download the
+[nvim-win64.zip file](https://github.com/neovim/neovim/releases) from here and
+unzip and copy the Neovim folder to your preferred location and
+[Add](#add-directory-to-your-executable-path) `C:\path\to\Neovim\bin` to your
+path.
+
+Copy the Neovim `favicon.ico` to `C:\Program Files\Neovim`📝.
+
+## Add Directory to your Executable Path
+
+Some software in this guide requires the `Path` to be update so it can be found.
+Replace `<path>` in this PowerShell snippet and run it to add the directory to
+your path:
+
+```powershell
+[Environment]::SetEnvironment("Path", $env:Path + ";<path>", "User")
+```
 
 ## Themes
 
@@ -61,7 +86,7 @@ Feel free to choose your own.
 
 Open Windows Terminal and open the Settings then click on `Open JSON file`.
 Find the section with other terminal profiles and copy paste the contents of
-[windows_terminal_profile.json](windows_terminal_profile.json).
+[windows_terminal_profile.json](windows_terminal_profile.json)📝.
 
 Repeat this for [windows_terminal_theme.json](windows_terminal_theme.json)
 putting it where the other themes are if you want to use the `Flexoki` theme.
@@ -74,9 +99,9 @@ Open the `Custom Context Menu` application.
 Click on the folder icon for `Open Menu Config Folder` and copy these files into
 the folder:
 
-- Diff in Neovim.json
-- Edit in Neovim.json
-- Edit in Neovim [Safe Mode].json
+- Diff in Neovim.json📝
+- Edit in Neovim.json📝
+- Edit in Neovim Safe Mode.json📝
 
 You will need to sign out then sign in again or restart `explorer.exe` in Task
 Manager for the change to take effect.
@@ -84,11 +109,25 @@ Manager for the change to take effect.
 You should now have a second `Open with` menu.
 You can customise the name of this with `Custom Context Menu`.
 
+### Windows 10 Only: Configure the Windows 10 Context Menu
+
+The Windows 10 context menu can also be configured by:
+
+🔐 Import `HKCR_win10_nvim_context_menu.reg` file.
+
+or
+
+🧑 Import `HKCU_win10_nvim_context_menu.reg`📝 file.
+
 ## Add Neovim as a Suggested App
 
 To associate Neovim with different file types add it as a suggested application.
 
-Import `HKCR_applications_nvim.reg` then restart `explorer.exe`.
+🔐 Import `HKCR_applications_nvim.reg` then restart `explorer.exe`.
+
+or
+
+🧑 Import `HKCU_applications_nvim.reg`📝 then restart `explorer.exe`.
 
 ## Associate File Types with Neovim
 
@@ -129,18 +168,14 @@ For example:
 .yml
 ```
 
-## Optional: Configure the Windows 10 Context Menu
-
-The Windows 10 context menu can also be configured by opening the
-`win10_nvim_context_menu.reg` file and allowing `regedit` to import it.
-
 ## Optional: Install LazyVim
 
 [LazyVim](https://www.lazyvim.org/) is a Neovim distribution that provides a
-range of plugins, syntax highlighting using treesitter and LSPs.
+range of plugins, syntax highlighting using treesitter, and LSPs.
 
-It took me a while to get it working on Windows 11, particularly compiling the
-treesitter parsers, so the steps below are here to document how I did it.
+It took me a while to get it working on Windows 10 and 11, particularly
+compiling the treesitter parsers, so the steps below are here to document how I
+did it.
 
 Prerequisites:
 
@@ -148,16 +183,20 @@ Prerequisites:
   - Microsoft.Git
   - burntsushi.ripgrep.MSVC
   - sharkdp.fd
-  - OpenJS.NodeJS - required by a few LSPs
+  - 🔐 OpenJS.NodeJS - required by a few LSPs.
   - Python.Python.3.12
   - zig.zig -
-    [this is required to be able to compile treesitter parsers](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support).
-  - Microsoft.PowerShell
-  - 7zip.7zip - add `C:\Program Files\7-Zip` to System path
+    [this is required by treesitter to compile parsers](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support).
+  - 🔐 Microsoft.PowerShell
+  - 🔐 7zip.7zip - [Add](#add-directory-to-your-executable-path) `C:\Program
+    Files\7-Zip` to your path so Neovim can find it.
+
+Note:
+if you do not have administrator rights then some functionality will be missing.
 
 - Close the terminal.
-- Open a new PowerShell terminal and type `$Env:Path` and check that `C:\Program
-  Files\Neovim\bin` there as well as zig.
+- Open a new PowerShell terminal and type `$Env:Path` and check that
+  `...\Neovim\bin` there as well as zig.
 - Optional:
   Edit the `PowerShell` terminal profile and change the font to your preferred
   Nerd Font.

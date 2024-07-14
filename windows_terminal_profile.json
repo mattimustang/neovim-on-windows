@@ -2,6 +2,7 @@
                 "closeOnExit": "automatic",
                 "colorScheme": "Flexoki",
                 "commandline": "\"C:\\Program Files\\Neovim\\bin\\nvim.exe\"",
+                "cursorShape": "filledBox",
                 "font": 
                 {
                     "face": "SauceCodePro Nerd Font"
