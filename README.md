@@ -101,7 +101,8 @@ the folder:
 
 - Diff in Neovim.json📝
 - Edit in Neovim.json📝
-- Edit in Neovim Safe Mode.json📝
+- Edit in Neovim Clean.json📝 - Runs Neovim without loading your plugins and
+  configuration.
 
 You will need to sign out then sign in again or restart `explorer.exe` in Task
 Manager for the change to take effect.

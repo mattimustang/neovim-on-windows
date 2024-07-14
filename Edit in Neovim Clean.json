@@ -1,7 +1,7 @@
 {
-    "title": "Edit in Neovim Safe Mode",
+    "title": "Edit in Neovim Clean",
     "exe": "wt.exe ",
-    "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" -u NONE \"{path}\"",
+    "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" --clean \"{path}\"",
     "icon": "\"C:\\Program Files\\Neovim\\favicon.ico\"",
     "acceptDirectory": false,
     "acceptDirectoryFlag": 7,

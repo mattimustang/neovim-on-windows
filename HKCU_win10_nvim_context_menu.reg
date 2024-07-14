@@ -7,6 +7,13 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\*\shell\nvim\command]
 @="wt --title \"%1\" \"C:\\Users\\username\\Neovim\\bin\\nvim.exe\" \"%1\""
 
+[HKEY_CURRENT_USER\Software\Classes\*\shell\nvim.clean]
+@="Edit with Neovim Clean"
+"Icon"="\"C:\\Users\\username\\Neovim\\favicon.ico\""
+
+[HKEY_CURRENT_USER\Software\Classes\*\shell\nvim.clean\command]
+@="wt --title \"%1\" \"C:\\Users\\username\\Neovim\\bin\\nvim.exe\" --clean \"%1\""
+
 [HKEY_CURRENT_USER\Software\Classes\directory\shell\nvim]
 @="Open in Neovim"
 "Icon"="\"C:\\Users\\username\\Neovim\\favicon.ico\""
