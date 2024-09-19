@@ -1,7 +1,7 @@
 {
     "title": "Edit in Neovim",
     "exe": "wt.exe ",
-    "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" \"{path}\"",
+    "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" -c \"lua vim.api.nvim_set_current_dir(vim.fn.expand('%:p:h'))\" \"{path}\"",
     "icon": "\"C:\\Program Files\\Neovim\\favicon.ico\"",
     "acceptDirectory": false,
     "acceptDirectoryFlag": 7,
