@@ -73,7 +73,7 @@ Replace `<path>` in this PowerShell snippet and run it to add the directory to
 your path:
 
 ```powershell
-[Environment]::SetEnvironment("Path", $env:Path + ";<path>", "User")
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";<path>", "User")
 ```
 
 ## Themes
