@@ -1,13 +1,13 @@
 {
     "title": "Edit in Neovim Clean",
+    "index": 2,
     "exe": "wt.exe ",
     "param": "--title \"{name}\" \"C:\\Program Files\\Neovim\\bin\\nvim.exe\" --clean \"{path}\"",
-    "icon": "\"C:\\Program Files\\Neovim\\favicon.ico\"",
-    "acceptDirectory": false,
+    "icon": "\"C:\\Program Files\\Neovim\\share\\icons\\hicolor\\128x128\\apps\\nvim.png\"",
+    "iconDark": "\"C:\\Program Files\\Neovim\\share\\icons\\hicolor\\128x128\\apps\\nvim.png\"",
     "acceptDirectoryFlag": 7,
-    "acceptFile": false,
     "acceptFileFlag": 4,
     "acceptExts": ".txt|.py|.md|.json",
     "acceptMultipleFilesFlag": 1,
-    "index": 2
+    "showWindowFlag": 0
 }
