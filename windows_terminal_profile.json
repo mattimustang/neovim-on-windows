@@ -3,8 +3,7 @@
                 "colorScheme": "Flexoki",
                 "commandline": "\"C:\\Program Files\\Neovim\\bin\\nvim.exe\"",
                 "cursorShape": "filledBox",
-                "font": 
-                {
+                "font": {
                     "face": "SauceCodePro Nerd Font"
                 },
                 "guid": "{bfaa0b62-7922-4a70-a167-6bac8f2a22f7}",
@@ -15,4 +14,3 @@
                 "scrollbarState": "hidden",
                 "startingDirectory": "%USERPROFILE%"
             }
-

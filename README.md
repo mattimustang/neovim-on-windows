@@ -58,9 +58,8 @@ Prerequisites:
 winget install neovim.neovim
 ```
 
-🧑 Download the
-[nvim-win64.zip file](https://github.com/neovim/neovim/releases) from here and
-unzip and copy the Neovim folder to your preferred location and
+🧑 Download the [nvim-win64.zip file](https://github.com/neovim/neovim/releases)
+from here and unzip and copy the Neovim folder to your preferred location and
 [Add](#add-directory-to-your-executable-path) `C:\path\to\Neovim\bin` to your
 path.
 
@@ -193,7 +192,8 @@ Prerequisites:
     Files\7-Zip` to your path so Neovim can find it.
 
 Note:
-if you do not have administrator rights then some functionality will be missing.
+🔐 if you do not have administrator rights then some functionality will be
+missing.
 
 - Close the terminal.
 - Open a new PowerShell terminal and type `$Env:Path` and check that
