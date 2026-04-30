@@ -63,7 +63,6 @@ from here and unzip and copy the Neovim folder to your preferred location and
 [Add](#add-directory-to-your-executable-path) `C:\path\to\Neovim\bin` to your
 path.
 
-Copy the Neovim `favicon.ico` to `C:\Program Files\Neovim`📝.
 
 ## Add Directory to your Executable Path
 
