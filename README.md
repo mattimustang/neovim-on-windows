@@ -122,9 +122,11 @@ or
 
 To associate Neovim with different file types add it as a suggested application.
 
+If you have installed it for all users:
+
 🔐 Import `HKCR_applications_nvim.reg` then restart `explorer.exe`.
 
-or
+or if you have installed in your home directory:
 
 🧑 Import `HKCU_applications_nvim.reg`📝 then restart `explorer.exe`.
 
